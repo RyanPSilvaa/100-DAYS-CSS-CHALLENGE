@@ -1,0 +1,136 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+    overflow: hidden;
+    background: #3FAF82;
+    color: #333;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+  
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+  
+.menu {
+    cursor: pointer;
+}
+  
+.line, .line::after, .line::before {
+    width: 80px;
+    height: 10px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.4);
+}
+  
+.line {
+    animation: line-up-rotate-reverse .7s forwards;
+}
+  
+.line::after {
+    content: "";
+    position: absolute;
+    animation: line-down-rotate-reverse .7s forwards, line-down-reverse .7s .7s forwards;
+}
+  
+.line::before {
+    content: "";
+    position: absolute;
+    animation: line-up-reverse .7s .7s forwards;
+}
+  
+.active .line::after {
+    animation: line-down .7s forwards, line-down-rotate .7s .7s forwards;
+}
+  
+.active .line {
+    animation: line-up-rotate .7s .7s forwards;
+}
+  
+.active .line::before {
+    animation: line-up .7s forwards;
+}
+  
+@keyframes line-down {
+    0% {
+        top: 18px;
+    }
+    100% {
+        top: 0px;
+    }
+}
+  
+@keyframes line-down-reverse {
+    0% {
+        top: 0px;
+    }
+    100% {
+        top: 18px;
+    }
+}
+  
+@keyframes line-up {
+    0% {
+        bottom: 18px;
+    }
+    100% {
+        bottom: 0px;
+    }
+}
+  
+@keyframes line-up-reverse {
+    0% {
+        bottom: 0px;
+    }
+    100% {
+        bottom: 18px;
+    }
+}
+  
+@keyframes line-down-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(90deg);
+    }
+}
+  
+@keyframes line-down-rotate-reverse {
+    0% {
+        transform: rotate(90deg);
+    }
+      100% {
+        transform: rotate(0deg);
+    }
+}
+  
+@keyframes line-up-rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(-45deg);
+    }
+}
+  
+@keyframes line-up-rotate-reverse {
+    0% {
+        transform: rotate(-45deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
