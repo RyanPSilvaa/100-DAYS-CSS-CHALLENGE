@@ -1,5 +1,4 @@
-
-@cubic-bezier: $cubic-bezier(0.4, 0, 0.49, 1);
+$cubic-bezier: cubic-bezier(.4, 0, .49, 1);
 
 .frame {
     position: absolute;
@@ -36,7 +35,7 @@
     clip-path: polygon(0% 100%, 50% 0%, 100% 100%);
     background-color: #F2F2F2;
     z-index: 1;
-    animation: pyramide-color 4s infinite ;
+    animation: pyramide-color 4s infinite $cubic-bezier;
 }
 
 .lado {
@@ -48,7 +47,7 @@
     clip-path: polygon(0% 0%, 100% 100%, 30% 100%);
     background: #DDDADA;
     z-index: 2;
-    animation: pyramide-color 4s infinite cubic-bezier reverse;
+    animation: pyramide-color 4s infinite $cubic-bezier reverse;
 }
 
 @keyframes pyramide-color {
@@ -80,7 +79,7 @@
     clip-path: polygon(32px 0, 148px 0, 50% 100%);
     background-color: rgb(0 0 0 / 20%);
     z-index: 2;
-    animation: shadow-move 4s infinite cubic-bezier;
+    animation: shadow-move 4s infinite $cubic-bezier;
 }
 
 @keyframes sombra-move {
@@ -127,7 +126,7 @@
     clip-path: circle();
     background-color: #FFED35;
     z-index: 0;
-    animation: solmove 4s cubic-bezier infinite;
+    animation: solmove 4s $cubic-bezier infinite;
 }
 
 @keyframes solmove {
@@ -157,7 +156,7 @@
     height: 100%;
     background-color: #272C34;
     z-index: 100;
-    animation: fade 4s cubic-bezier infinite;
+    animation: fade 4s $cubic-bezier infinite;
 }
 
 @keyframes fade {

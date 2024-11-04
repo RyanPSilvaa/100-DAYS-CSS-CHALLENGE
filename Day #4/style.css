@@ -1,0 +1,112 @@
+.frame {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 400px;
+	height: 400px;
+	margin-top: -200px;
+	margin-left: -200px;
+	border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+	overflow: hidden;
+	background: salmon;
+	color: #333;
+	font-family: "Open Sans", Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.circle-one {
+	position: absolute;
+	margin: -39px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	height: 90px;
+	width: 90px;
+	background: white;
+	z-index: 1;
+	border-radius: 50%;
+	animation: sizing-1 2s ease-in-out infinite alternate both;
+}
+
+.circle-two {
+	position: absolute;
+	margin: -17px;
+	top: 37%;
+	left: 37%;
+	transform: translate(-50%, -50%);
+	height: 60px;
+	width: 60px;
+	background: #fff;
+	z-index: 2;
+	border-radius: 50%;
+	animation: sizing-2 2s ease-in-out infinite alternate both;
+}
+.circle-three {
+	position: absolute;
+	margin: -10px;
+	top: 44%;
+	left: 44%;
+	transform: translate(-50%, -50%);
+	width: 30px;
+	height: 30px;
+	background: #fff;
+	border-radius: 50%;
+	z-index: 3;
+	animation: sizing-3 2s ease-in-out infinite alternate both;
+}
+
+@keyframes sizing-1 {
+	0%,
+	100% {
+		box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.1);
+		transform: scale(0);
+	}
+	100% {
+		box-shadow: 6px 6px 14px 5px rgba(0, 0, 0, 0.3);
+		transform: scale(1);
+	}
+}
+@keyframes sizing-2 {
+	0%,
+	10% {
+		box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.1);
+		transform: scale(0);
+	}
+	100% {
+		box-shadow: 6px 6px 14px 5px rgba(0, 0, 0, 0.3);
+		transform: scale(1);
+	}
+}
+
+@keyframes sizing-2 {
+	0%,
+	40% {
+		box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.1);
+		transform: scale(0);
+	}
+	100% {
+		box-shadow: 5px 5px 14px 5px rgba(0, 0, 0, 0.3);
+		transform: scale(1);
+	}
+}
+
+@keyframes sizing-3 {
+	0%,
+	70% {
+		box-shadow: 1px 1px 5px 3px rgba(0, 0, 0, 0.1);
+		transform: scale(0);
+	}
+	100% {
+		box-shadow: 6px 6px 14px 5px rgba(0, 0, 0, 0.3);
+		transform: scale(1);
+	}
+}
