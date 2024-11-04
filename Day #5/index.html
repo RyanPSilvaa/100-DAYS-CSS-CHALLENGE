@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Day #5</title>
+</head>
+<body>
+    <div class="frame">
+        <div class="center">
+              <div class="table">
+                  <header class="header">
+                      <div class="name">
+                          <div class="title">WEEKLY PERORT</div>
+                          <div>01. Feb - 07. Feb</div>
+                      </div>
+                      <div class="revenue">
+                          <div>Revenue</div>
+                          <div class="title">$ 3621.79</div>
+                      </div>
+                  </header>
+                  <div class="content">
+                      <div class="legend">
+                          <div class="legend-item" data-item="views">
+                              Views
+                          </div>
+                          <div class="legend-item" data-item="purchases">Purchases</div>
+                      </div>
+                      <div class="chart-wrapper">
+                          <svg class="chart" width="260" height="80" 
+                                   viewBox="0 0 260 80" >
+                              <g stroke="#eee">
+                                  <line x1="0" y1="0" x2="260" y2="0"></line>
+                                  <line x1="0" y1="40" x2="260" y2="40"></line>
+                                  <line x1="0" y1="80" x2="260" y2="80"></line>
+                              </g>		
+                              <g data-item="views">
+                                  <polyline points="10,43 50,20 90,25 130,17 170,38, 210,48, 250,18" 
+                                                      stroke="var(--item-color)" stroke-width="2" 
+                                                      fill="none"></polyline>
+                              </g>
+                              <g data-item="purchases">
+                                  <polyline points="10,63 50,60 90,70 130,55 170,60, 210,75, 250,65" 
+                                                      stroke="var(--item-color)" stroke-width="2" 
+                                                      fill="none"></polyline>
+                              </g>
+                          </svg>
+                          <div class="points">
+                              <div class="views" data-item="views">
+                                  <div class="point" data-value="490"></div>
+                                  <div class="point" data-value="750"></div>
+                                  <div class="point" data-value="680"></div>
+                                  <div class="point" data-value="820"></div>
+                                  <div class="point" data-value="502"></div>
+                                  <div class="point" data-value="420"></div>
+                                  <div class="point" data-value="760"></div>
+                              </div>
+                              <div class="purchases" data-item="purchases">
+                                  <div class="point" data-value="230"></div>
+                                  <div class="point" data-value="250"></div>
+                                  <div class="point" data-value="120"></div>
+                                  <div class="point" data-value="400"></div>
+                                  <div class="point" data-value="380"></div>
+                                  <div class="point" data-value="50"></div>
+                                  <div class="point" data-value="260"></div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="footer">
+                          <div>MON</div>
+                          <div>TUE</div>
+                          <div>WED</div>
+                          <div>THU</div>
+                          <div>FRI</div>
+                          <div>SAT</div>
+                          <div>SUN</div>
+                      </div>
+                  </div>
+                  
+                  
+              </div>
+        </div>
+      </div>
+</body>
+</html>

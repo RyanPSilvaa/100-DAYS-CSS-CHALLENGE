@@ -1,0 +1,243 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+      box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+      overflow: hidden;
+    background: #fff;
+    color: #333;
+      font-family: 'Open Sans', Helvetica, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  } 
+
+  
+  :root {
+      --views-color: #a50f0f;
+      --purchases-color: #0b2561;
+  }
+  
+  * {
+      box-sizing: border-box;
+  }
+  
+  .frame {
+      background: rgb(44, 153, 153);
+  }
+  
+  .table {
+      background: white;
+      width: 300px;
+      box-shadow: 5px 5px 15px rgba(0,0,0,0.3);
+  }
+  
+  .header {
+      background: rgb(197, 153, 71);
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      padding: 15px;
+      font-size: 14px;
+  }
+  
+  .title {
+          font-size: 16px;
+          font-weight: bold;
+      }Ï
+  
+  .revenue {
+      text-aling: right;
+  }
+  
+  .content {
+      padding: 15px;
+      color: #333;
+  }
+  
+  .legend {
+      display: flex;
+      justify-content: flex-end;
+      gap: 20px;
+  }
+  
+  [data-item="views"] {
+      --item-color: var(--views-color);
+  }
+  
+  [data-item="purchases"] {
+      --item-color: var(--purchases-color);
+  }
+  
+  .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      
+      &:before {
+          content: '';
+          width: 15px;
+          height: 4px;
+          background: var(--item-color);
+          border-radius: 2px;
+      }
+  }
+  
+  .chart-wrapper {
+      padding: 5px;
+      margin-top: 10px;
+      position: relative;
+  }
+  
+  .chart {
+      box-shadow: none;
+  }
+  
+  .footer {
+      display: flex;
+      justify-content: space-between;
+      font-size: 10px;
+  }
+  
+  .points {
+      position: absolute;
+      inset: 0;
+  }
+  
+  .point {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--item-color);
+      cursor: pointer;
+      transform: translate(2px, 2px);
+      
+      &:before, &:after {
+          position: absolute;
+          top: 0;
+          left: 50%;
+          opacity: 0;
+          transform: translate(-50%, var(--offset));
+          transition: transform 250ms ease-in-out, opacity 250ms ease-in-out;
+          pointer-events: none;
+      }
+      
+      &:before {
+          --offset: -25px;
+          content: attr(data-value);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 20px;
+          padding: 0 5px;
+          background: var(--item-color);
+          color: white;
+          font-size: 10px;
+          border-radius: 4px;
+          
+      }
+      
+      &:after {
+          --offset: -6px;
+          content: '';
+          display: block;
+          border: 0px none transparent;
+          border-top: 5px solid var(--item-color);
+          border-left: 5px solid transparent;
+          border-right: 5px solid transparent;
+      }
+      
+      &:hover {
+          &:before {
+              --offset: -30px;
+              opacity: 1;
+          }
+          &:after {
+              --offset: -11px;
+              opacity: 1;
+          }
+      }
+      
+      &:nth-child(1) {
+          left: 10px;
+      }
+      &:nth-child(2) {
+          left: 50px;
+      }
+      &:nth-child(3) {
+          left: 90px;
+      }
+      &:nth-child(4) {
+          left: 130px;
+      }
+      &:nth-child(5) {
+          left: 170px;
+      }
+      &:nth-child(6) {
+          left: 210px;
+      }
+      &:nth-child(7) {
+          left: 250px;
+      }
+  }
+  
+  .views .point {
+      &:nth-child(1) {
+          top: 43px;
+      }
+      &:nth-child(2) {
+          top: 20px;
+      }
+      &:nth-child(3) {
+          top: 25px;
+      }
+      &:nth-child(4) {
+          top: 17px;
+      }
+      &:nth-child(5) {
+          top: 38px;
+      }
+      &:nth-child(6) {
+          top: 48px;
+      }
+      &:nth-child(7) {
+          top: 18px;
+      }
+  }
+  
+  .purchases .point {
+      &:nth-child(1) {
+          top: 63px;
+      }
+      &:nth-child(2) {
+          top: 60px;
+      }
+      &:nth-child(3) {
+          top: 70px;
+      }
+      &:nth-child(4) {
+          top: 55px;
+      }
+      &:nth-child(5) {
+          top: 60px;
+      }
+      &:nth-child(6) {
+          top: 75px;
+      }
+      &:nth-child(7) {
+          top: 65px;
+      }
+  }
