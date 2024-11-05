@@ -1,0 +1,175 @@
+/*  delete the following line if no text is used */
+/*  edit the line if you wanna use other fonts */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+/* use only the available space inside the 400x400 frame */
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: linear-gradient(45deg, rgb(60, 5, 92), rgb(129, 37, 204));
+    color: #333;
+    font-family: Helvetica, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.profile {
+    width: 300px;
+    height: 300px;
+    background-color: white;
+    border-radius: 5px;
+    display: flex;
+}
+
+.left {
+    background-color: white;
+    width: 200px;
+    height: 100%;
+    position: relative;
+    .picture {
+        margin:0 auto;
+        margin-top: 26px;
+        height: 90px;
+        width: 90px;        
+        position: relative;
+
+        img {
+           position: absolute;
+           top: 12px;
+           left: 6px;
+           width: 70px;
+           height: 70px; 
+           border-radius: 50%;
+        }
+        .cycle1 {
+            width: 76px;
+            height: 76px;
+            border: 2px solid rgb(60, 5, 92);
+            position: absolute;
+            margin: 6px auto;
+            border-radius: 50%;
+            clip-path: circle(90% at 0% 50%);
+            transition: 2s ease all;
+        }
+        .cycle2 {
+            width: 82px;
+            height: 82px;
+            border: 2px solid rgb(60, 5, 92);
+            position: absolute;
+            margin:3px auto;
+            margin-left:-3px;
+            border-radius: 50%;
+            clip-path: circle(90% at 100% 50%);
+            transition: 2s ease all;
+        }
+
+    }
+    
+    .nome {
+        margin-top:5px ;
+        margin-left: 50%;
+        transform: translateX(-50px);
+        color: rgb(60, 5, 92);
+        font-size: 15px;
+        font-weight: 300;
+    }
+    .job {
+        margin-top:5px ;
+        margin-left: 50%;
+        transform: translateX(-35px);
+        color: #1f0061;
+        font-size: 11px;
+        font-weight: 300;
+    }
+
+    .action {
+        position: absolute;
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        .follow {
+            width: 120px;
+            height: 30px;
+            background-color: #cbcbcb;
+						border-color: #1f0061;
+            border-radius: 40px;
+            transition: 0.1s ease all;
+        }
+        .message{
+            width: 120px;
+            height: 30px;
+            background-color: #cbcbcb;
+            border-color: #1f0061;
+            border-radius: 40px;
+            margin-top:5px;
+            transition: 0.1s ease all;
+        }
+    }
+}
+.picture:hover .cycle1 {
+    transform: rotate(360deg);
+}
+.picture:hover .cycle2 {
+    transform: rotate(-360deg);
+}
+.action .follow:hover,.action .message:hover {
+    background-color: rgb(60, 5, 92);
+    color: white;
+}
+
+.right {
+    background-color: white;
+    width: 100px;
+    height: 100%;
+    transform-style: preserve-3d;
+    perspective: 300;
+
+    .box {
+        height: 99px;
+				color: white;
+        background-color: #1f0061;
+        margin-bottom: 1px;
+        overflow: hidden;
+        transition: 0.2s ease all;
+        
+        .counts{
+            display: block;
+            font-size: 18px;
+            text-align: center;
+            margin-top:50%;
+            transform: translateY(-45%);
+        }
+        .value {
+            display: block;
+            font-size: 11px;
+            text-align: center;
+            margin-bottom:50%;
+            transform: translateY(-50%);
+        }
+    }
+    .box:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.right .box:hover {
+    cursor: pointer;
+    transform: translate(-1px,-1px);
+    box-shadow: 1px 1px 3px 1px black;
+}
