@@ -1,4 +1,98 @@
-.card {
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #4f5a69;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.notifications {
+    width: 290px;
+    background: white;
+    border-radius: 5px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.header {
+    height: 48px;
+    background: #00132f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 18px;
+}
+
+.header h3 {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.menu, .search {
+    color: #aab6c8;
+    font-size: 17px;
+}
+
+.notification-list {
+    padding: 30px 15px 30px 40px;
+    position: relative;
+}
+
+/* Linha vertical */
+.notification-list::before {
+    content: "";
+    position: absolute;
+    left: 26px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #e5e8ed;
+}
+
+.notification {
+    position: relative;
+    margin-bottom: 28px;
+}
+
+.notification:last-child {
+    margin-bottom: 0;
+}
+
+/* Bolinha azul */
+.notification::before {
+    content: "";
+    position: absolute;
+    left: -17px;
+    top: 5px;
+    width: 7px;
+    height: 7px;
+    background: #176df0;
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.time {
+    display: block;
+    color: #8792a5;
+    font-size: 13px;
+    margin-bottom: 3px;
+}
+
+.notification p {
+    color: #00132f;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.notification strong {
+    font-weight: bold;
 }
